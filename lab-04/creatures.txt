@@ -1,0 +1,3 @@
+Unicorn, 120
+Dragon, 300
+Griffin, 250
