@@ -1,0 +1,471 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .SFNS-Semibold;\f1\fnil\fcharset0 .SFNS-Regular;\f2\fnil\fcharset0 HelveticaNeue-Bold;
+\f3\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f4\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;}
+{\*\expandedcolortbl;;\cssrgb\c6700\c6700\c6700;}
+\margl1440\margr1440\vieww25100\viewh15680\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs40 \cf2 Name: Fouad Bin Karim
+\f1\b0\fs24 \cf2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf2 5. Plotting Circles with the Mouse \'96 CirclePlotter.java
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. Which class contains the main method?
+\f1\b0 \
+The 
+\f3 main
+\f1  method is contained in the 
+\f3 CirclePlotter
+\f1  class. This class is responsible for creating the application window and initializing the drawing panel.\
+\
+
+\f2\b b. On which class are the circles drawn?
+\f1\b0 \
+The circles are drawn on a custom panel class (a subclass of 
+\f3 JPanel
+\f1 ) that is added to the main window.\
+\
+
+\f2\b c. What is the type of the class on which the circles are drawn?
+\f1\b0 \
+The class is of type 
+\f3 JPanel
+\f1 .\
+\
+
+\f2\b d. What Interface does the Panel implement that allows it to process mouse input?
+\f1\b0 \
+The panel implements the 
+\f3 MouseListener
+\f1  interface.\
+\
+
+\f2\b e. What function in the code draws the circle?
+\f1\b0 \
+The 
+\f3 paintComponent(Graphics g)
+\f1  method draws the circles.\
+\
+
+\f2\b f. What line determines the size of the circle?
+\f1\b0 \
+The size of the circle is determined by the width and height values passed into 
+\f3 g.fillOval(...)
+\f1 .\
+\
+
+\f2\b g. What variable contains all the information about the circles to be drawn?
+\f1\b0 \
+An 
+\f3 ArrayList
+\f1  (commonly storing 
+\f3 Point
+\f1  objects) holds the positions of all circles to be drawn.\
+\
+
+\f2\b h. What is the name of the function that actually draws the circles?
+\f1\b0 \
+
+\f3 paintComponent(Graphics g)
+\f1 .\
+\
+
+\f2\b i. What methods needed to be implemented to satisfy the Interface?
+\f1\b0 \
+The panel must implement all methods from 
+\f3 MouseListener
+\f1 , including 
+\f3 mouseClicked
+\f1 , 
+\f3 mousePressed
+\f1 , 
+\f3 mouseReleased
+\f1 , 
+\f3 mouseEntered
+\f1 , and 
+\f3 mouseExited
+\f1 .\
+\
+
+\f2\b j. Which overridden interface method responds to the mouse clicks that cause the circle to be drawn?
+\f1\b0 \
+
+\f3 mouseClicked(MouseEvent e)
+\f1 .\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+
+\f1 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf2 6. Moving Squares with the Mouse \'96 SquarePlotter.java
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. Similarities and differences between CirclePlotter and SquarePlotter
+\f1\b0 \
+Both programs use a 
+\f3 JPanel
+\f1 , override 
+\f3 paintComponent
+\f1 , and respond to mouse input.\
+The key difference is that 
+\f3 SquarePlotter
+\f1  allows interaction with existing shapes, including clicking and dragging squares to move them.\
+\
+
+\f2\b b. What Interfaces are implemented for this program?
+\f1\b0 \
+The program implements 
+\f3 MouseListener
+\f1  and 
+\f3 MouseMotionListener
+\f1 .\
+\
+
+\f2\b c. Names of all Interface methods overridden that affect program behavior
+\f1\b0 \
+
+\f3 mousePressed
+\f1 , 
+\f3 mouseReleased
+\f1 , 
+\f3 mouseDragged
+\f1 , and 
+\f3 mouseClicked
+\f1 .\
+\
+
+\f2\b d. Name of the overridden method that enables squares to move
+\f1\b0 \
+
+\f3 mouseDragged(MouseEvent e)
+\f1 .\
+\
+
+\f2\b e. Purpose of overriding the mouseReleased method
+\f1\b0 \
+It stops the dragging operation and resets state variables when the mouse button is released.\
+\
+
+\f2\b f. Purpose of the insideExisting flag
+\f1\b0 \
+This flag determines whether the mouse is interacting with an existing square.\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	When 
+\f3 \cf2 false
+\f1 \cf2 , clicking creates a new square.\
+	\'95	When 
+\f3 \cf2 true
+\f1 \cf2 , the user is dragging an existing square.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li260\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 The value becomes true when the user clicks inside an already drawn square.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 g. Which methods belong to the MouseMotionListener interface?
+\f1\b0 \
+
+\f3 mouseDragged
+\f1  and 
+\f3 mouseMoved
+\f1 .\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+
+\f1 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf2 7. Rotating and Resizing with the Mouse \'96 SquarePlotterAdvanced.java
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. Two new manipulations available in this program
+\f1\b0 \
+The user can rotate squares and resize them.\
+\
+
+\f2\b b. Lines of code that enable these new manipulations
+\f1\b0 \
+Rotation is enabled using angle calculations and graphics transformations.\
+Resizing is handled by adjusting width and height values based on mouse movement during drag events.\
+\
+
+\f2\b c. New interfaces implemented or methods overridden
+\f1\b0 \
+No new interfaces are added, but additional logic is implemented inside existing mouse event handlers.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf2 \
+
+\f0\b\fs30 8. Introducing JavaFX \'96 HelloJavaFX
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. What prints to the screen?
+\f1\b0 \
+A JavaFX window opens displaying a text message and a menu bar.\
+\
+
+\f2\b b. What happens to the text when the window is resized?
+\f1\b0 \
+The text automatically adjusts its position due to JavaFX\'92s layout system.\
+\
+
+\f2\b c. What packages are imported and what do they do?
+\f1\b0 \
+Packages from 
+\f3 javafx.application
+\f1 , 
+\f3 javafx.stage
+\f1 , 
+\f3 javafx.scene
+\f1 , and 
+\f3 javafx.scene.control
+\f1  are used to manage the window, scene graph, and UI controls.\
+\
+
+\f2\b d. What is the superclass of this program?
+\f1\b0 \
+
+\f3 Application
+\f1 .\
+\
+
+\f2\b e. What superclass method is overridden to make execution happen?
+\f1\b0 \
+
+\f3 start(Stage stage)
+\f1 .\
+\
+
+\f2\b f. What line sets the text that appears in the window?
+\f1\b0 \
+The line that assigns text to a label, such as 
+\f3 label.setText(...)
+\f1 .\
+\
+
+\f2\b g. What line sets the text in the menu bar?
+\f1\b0 \
+The creation of 
+\f3 Menu
+\f1  or 
+\f3 MenuItem
+\f1  objects sets the menu bar text.\
+\
+
+\f2\b h. What happens if line 16 is commented out?
+\f1\b0 \
+The application fails to properly initialize or display the scene.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf2 \
+
+\f0\b\fs30 9. Playing Videos with JavaFX \'96 VideoPlayer.java
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. Is the program using JavaFX?
+\f1\b0 \
+Yes, it uses JavaFX for both UI and media playback.\
+\
+
+\f2\b b. What packages are imported and used?
+\f1\b0 \
+Packages include 
+\f3 javafx.scene.media
+\f1 , 
+\f3 javafx.stage
+\f1 , and 
+\f3 javafx.scene.control
+\f1 .\
+\
+
+\f2\b c. Which packages are not from JavaFX?
+\f1\b0 \
+Packages such as 
+\f3 java.io
+\f1  and 
+\f3 java.util
+\f1 .\
+\
+
+\f2\b d. What object provides a UI for selecting a video?
+\f1\b0 \
+
+\f3 FileChooser
+\f1 .\
+\
+
+\f2\b e. What object actually plays the video?
+\f1\b0 \
+
+\f3 MediaPlayer
+\f1 .\
+\
+
+\f2\b f. Relationship between main(), launch(), and start()
+\f1\b0 \
+
+\f3 main()
+\f1  calls 
+\f3 launch()
+\f1 , which initializes JavaFX and then calls 
+\f3 start()
+\f1  to begin execution.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+
+\f1 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf2 10. Higher Dimensional Data Representation
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. What methods enable zooming and rotation in Scatter3DPlot.java?
+\f1\b0 \
+Mouse scroll events handle zooming, and mouse drag events handle rotation.\
+\
+
+\f2\b b. How many columns are in sample_data.csv and what do they represent?
+\f1\b0 \
+There are three columns representing X, Y, and Z coordinates. Each row represents one sphere.\
+\
+
+\f2\b d. Analysis of sample_data_4d.csv
+\f1\b0 \
+The file contains four columns: X, Y, Z, and time. The time column determines when a sphere appears.\
+\
+
+\f2\b e. Which variable holds all the points? What is its type?
+\f1\b0 \
+An 
+\f3 ArrayList
+\f1  holding point objects.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf2 \
+
+\f0\b\fs30 11. Database Programming
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. What packages are included?
+\f1\b0 \
+
+\f3 java.sql
+\f1  and the PostgreSQL driver package.\
+\
+
+\f2\b b. Database connection details
+\f1\b0 \
+The program uses the 
+\f3 jdbc:postgresql
+\f1  protocol, localhost hostname, port 5432, and credentials defined in the code.\
+\
+
+\f2\b c. What command retrieves information from the database?
+\f1\b0 \
+
+\f3 executeQuery()
+\f1 .\
+\
+
+\f2\b d. What is a ResultSet?
+\f1\b0 \
+A 
+\f3 ResultSet
+\f1  stores the data returned from a database query.\
+\
+
+\f2\b e. What lines execute if the database connection fails?
+\f1\b0 \
+The 
+\f3 catch(SQLException e)
+\f1  block executes.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf2 \
+
+\f0\b\fs30 12. Network Programming \'96 Chat Programs
+\f1\b0\fs24 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b \cf2 a. What prints on the server versus client windows?
+\f1\b0 \
+The server prints connection and message logs, while clients display chat messages.\
+\
+
+\f2\b b. Did all clients receive messages?
+\f1\b0 \
+Yes, messages are broadcast to all connected clients.\
+\
+
+\f2\b c. What packages are imported?
+\f1\b0 \
+
+\f3 java.net
+\f1 , 
+\f3 java.io
+\f1 , and 
+\f3 java.util
+\f1 .\
+\
+
+\f2\b d. What port is used?
+\f1\b0 \
+A fixed port defined in the program.\
+\
+
+\f2\b e. What object facilitates communication?
+\f1\b0 \
+
+\f3 Socket
+\f1 .\
+\
+
+\f2\b f. Which server method transmits messages to all clients?
+\f1\b0 \
+The method that iterates through client output streams.\
+\
+
+\f2\b g. Which client method receives messages?
+\f1\b0 \
+A method that continuously reads from a 
+\f3 BufferedReader
+\f1 .\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \
+}
